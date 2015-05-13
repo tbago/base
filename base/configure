@@ -1,0 +1,74 @@
+#!/bin/sh
+
+debug_cflag="-D_DEBUG -g3 -Wall"
+release_cflag="-DNDEBUG -O3"
+
+show_help()
+{  
+echo "configure options: debug"
+echo "help        Show this help"
+echo "debug       Enable debuging"
+echo "----------------Platforms---------------"
+echo "mingw32     Mingw32 X86 version"
+echo "applex86    MAC X86 version"
+echo "applex64    MAC X64 version"
+}
+
+make_config()
+{
+  if test "$debug" = 1; then
+	echo "Configing debug version..."
+	cflag=$debug_cflag
+  else
+	echo "Configing release version..."
+	cflag=$release_cflag
+  fi
+  
+  flagset=0
+    
+  if test "$mingw32" = 1; then
+    exportfolder="mingw32"
+	Makefile="mingw"
+	flagset=1
+  fi
+    
+  if test "$applex86" = 1; then
+    cflag="$cflag -arch i686 -read_only_relocs suppress"
+	flagset=1 
+	exportfolder="applex86"
+	Makefile="apple"
+  fi
+  
+  if test "$applex64" = 1; then
+    cflag="$cflag"
+	flagset=1
+	exportfolder="applex64"
+	Makefile="apple"
+  fi
+    
+  if test "$flagset" = 0 ; then
+    echo "No platform was set, please configure help for details."
+	exit 1
+  fi
+  
+  echo "cflag=$cflag" >> config.mak
+  echo "exportfolder=$exportfolder" >> config.mak
+  echo "lib=$lib" >> config.mak
+  echo "include Makefile-$Makefile" > Makefile
+  echo "Done!"
+}
+
+for var in $*; do
+ eval $var=1
+done
+
+if test "$help" = 1; then
+  show_help
+  exit
+fi
+
+echo "#Auto generate by configure script" > config.mak
+
+make_config
+
+echo "Please type make or make export start"

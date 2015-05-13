@@ -1,0 +1,23 @@
+include config.mak 
+files=base_switches.cc logging.cc string16.cc time.cc vlog.cc \
+	safe_strerror_posix.cc native_library_posix.cc file_util.cc file_util_posix.cc \
+	./debug/alias.cc ./debug/debugger.cc ./debug/debugger_posix.cc \
+	./files/file_path.cc \
+	./strings/string_number_conversions.cc ./strings/string_piece.cc \
+	./strings/string_util_posix.cc \
+	./strings/string_util.cc \
+	./synchronization/lock_impl_posix.cc \
+	./threading/platform_thread_posix.cc
+
+cc=g++
+include=-I ../
+libs=$(lib)
+cflag2=$(cflag) -mmacosx-version-min=10.6 -dynamiclib -Wl,-single_module
+product_name=base
+
+$(product_name): $(files) Makefile
+	$(cc) $(include) $(libs) $(files) $(cflag2) -install_name "@executable_path/$(product_name).dylib" -o $(product_name).dylib
+clean:
+	-rm -f *.o *.a *.dylib	
+export: $(product_name).dylib
+	cp $(product_name).dylib ../export/$(exportfolder)/
