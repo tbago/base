@@ -20,8 +20,8 @@
 // These classes are represented as only a 64-bit value, so they can be
 // efficiently passed by value.
 
-#ifndef BASE_TIME_H_
-#define BASE_TIME_H_
+#ifndef BASE_TIME_UTIL_H_
+#define BASE_TIME_UTIL_H_
 
 #include <time.h>
 
@@ -215,4 +215,4 @@ inline TimeDelta operator*(int64 a, TimeDelta td) {
 
 }  // namespace base
 
-#endif  // BASE_TIME_H_
+#endif  // BASE_TIME_UTIL_H_

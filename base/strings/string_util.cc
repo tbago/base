@@ -20,7 +20,7 @@ std::vector<std::string> StringSplit( const std::string& input, const std::strin
             }
             ++pc;
         }
-        if (*pc != NULL)         //该字符需要删除
+        if (*pc != NULL)         //need delete char
         {
             if (len != 0) {
                 std::string tmp;
@@ -30,7 +30,7 @@ std::vector<std::string> StringSplit( const std::string& input, const std::strin
             ++p;
             len = 0;
         }
-        else         //该字符不需要删除
+        else         //not need delete
         {
             if (len == 0) {
                 q = p;

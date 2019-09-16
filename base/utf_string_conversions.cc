@@ -122,6 +122,7 @@ BASE_EXPORT std::string WideToASCII( const wchar_t* src, size_t src_len )
     delete []char_txt;
     return ret_str;
 }
+
 #elif defined(OS_POSIX)
 BASE_EXPORT bool WideToUTF8( const wchar_t* src, size_t src_len, std::string* output )
 {
@@ -157,10 +158,10 @@ BASE_EXPORT std::wstring ASCIIToWide( const char * src, size_t src_len )
     return L"";
 }
 
-BASE_EXPORT string WideToASCII( const wchar_t* src, size_t src_len )
+BASE_EXPORT std::string WideToASCII( const wchar_t* src, size_t src_len )
 {
     LOG(FATAL)<<"not implement";
     return "";
 }
-}
+
 #endif

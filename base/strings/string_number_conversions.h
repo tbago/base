@@ -7,6 +7,7 @@
 
 #include <string>
 #include <vector>
+#include <sstream>
 
 #include "base/base_export.h"
 #include "base/basictypes.h"
@@ -105,13 +106,13 @@ BASE_EXPORT bool HexStringToBytes(const std::string& input,
 
 
 /*!
-@brief 将字符串转换成整数
+@brief convert string to integer
 */
 BASE_EXPORT
 int StringToInt(const std::string& input);
 
 /*!
-@brief 通用类型转化
+@brief commen type converter
 @example double fValue = common_convertw<double>(const wchar_t input);
 */
 
@@ -119,9 +120,9 @@ template<class out_type,class in_value>
 out_type common_convert( const in_value & t )
 {
     std::stringstream stream;
-    stream<<t;//向流中传值
-    out_type result;//这里存储转换结果
-    stream>>result;//向result中写入值
+    stream<<t;          //put itme to stream
+    out_type result;    //use to store result
+    stream>>result;     //write store result from stream
     return result;
 }
 
@@ -129,9 +130,9 @@ template<class out_type,class in_value>
 out_type common_convertw(const in_value & t)
 {
     std::wstringstream stream;
-    stream<<t;//向流中传值
-    out_type result;//这里存储转换结果
-    stream>>result;//向result中写入值
+    stream<<t;
+    out_type result;
+    stream>>result;
     return result;
 }
 
