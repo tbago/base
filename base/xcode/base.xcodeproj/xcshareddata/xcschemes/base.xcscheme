@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0C7BEDE232F23F100A1D898"
-               BuildableName = "libbase.dylib"
+               BuildableName = "base.dylib"
                BlueprintName = "base"
                ReferencedContainer = "container:base.xcodeproj">
             </BuildableReference>
@@ -29,8 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -46,13 +44,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0C7BEDE232F23F100A1D898"
-            BuildableName = "libbase.dylib"
+            BuildableName = "base.dylib"
             BlueprintName = "base"
             ReferencedContainer = "container:base.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -64,7 +60,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0C7BEDE232F23F100A1D898"
-            BuildableName = "libbase.dylib"
+            BuildableName = "base.dylib"
             BlueprintName = "base"
             ReferencedContainer = "container:base.xcodeproj">
          </BuildableReference>
