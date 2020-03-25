@@ -44,7 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D0C7BEDF232F23F100A1D898 /* libbase.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libbase.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C7BEDF232F23F100A1D898 /* base.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = base.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C7BEED232F243800A1D898 /* build_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = build_config.h; path = ../../build_config.h; sourceTree = "<group>"; };
 		D0C7BEEE232F243800A1D898 /* base_switches.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base_switches.cc; path = ../../base_switches.cc; sourceTree = "<group>"; };
 		D0C7BEEF232F243800A1D898 /* base_switches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base_switches.h; path = ../../base_switches.h; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		D0C7BEE0232F23F100A1D898 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0C7BEDF232F23F100A1D898 /* libbase.dylib */,
+				D0C7BEDF232F23F100A1D898 /* base.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,7 +262,7 @@
 			);
 			name = base;
 			productName = base;
-			productReference = D0C7BEDF232F23F100A1D898 /* libbase.dylib */;
+			productReference = D0C7BEDF232F23F100A1D898 /* base.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -446,7 +446,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@executable_path";
-				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_PREFIX = "";
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
@@ -465,7 +465,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@executable_path";
-				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_PREFIX = "";
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
