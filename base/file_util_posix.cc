@@ -1,4 +1,4 @@
-#include "base/file_util.h"
+﻿#include "base/file_util.h"
 #include <unistd.h>
 #include <mach-o/dyld.h>
 #include <sys/types.h>
@@ -145,7 +145,7 @@ std::string find_get_path(find_data* pFindData)
     std::string name = pData->data->d_name;
     return pData->path + name;
 }
-    
+
 BASE_EXPORT void EnumFilesFromDirectory( std::string &directory,
                                         bool recursion,
                                         std::vector<std::string> &file_ext,

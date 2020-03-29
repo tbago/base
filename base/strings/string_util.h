@@ -1,4 +1,4 @@
-// Copyright 2013 The Chromium Authors. All rights reserved.
+ï»¿// Copyright 2013 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 //
@@ -23,7 +23,7 @@ int strncasecmp(const char* s1, const char* s2, size_t count);
 BASE_EXPORT
 std::vector<std::string> StringSplit(const std::string& input, const std::string& separet_chars);
 
-///½«×Ö·û´®×ª»»³É´óĞ´×Ö·û´®
+///å°†å­—ç¬¦ä¸²è½¬æ¢æˆå¤§å†™å­—ç¬¦ä¸²
 BASE_EXPORT
 std::string UppercaseString(const std::string& input);
 

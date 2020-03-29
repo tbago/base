@@ -1,4 +1,4 @@
-#ifndef BASE_WIN_WIN_UTIL_H_
+﻿#ifndef BASE_WIN_WIN_UTIL_H_
 #define BASE_WIN_WIN_UTIL_H_
 
 #include "base/basictypes.h"

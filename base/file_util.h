@@ -1,4 +1,4 @@
-#ifndef BASE_FILE_UTIL_H_
+﻿#ifndef BASE_FILE_UTIL_H_
 #define BASE_FILE_UTIL_H_
 
 #include "base/build_config.h"
