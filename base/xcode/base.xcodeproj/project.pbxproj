@@ -255,6 +255,7 @@
 				D0C7BEDB232F23F100A1D898 /* Headers */,
 				D0C7BEDC232F23F100A1D898 /* Sources */,
 				D0C7BEDD232F23F100A1D898 /* Frameworks */,
+				D01D56FA2435DCBA0005975B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -295,6 +296,26 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D01D56FA2435DCBA0005975B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION == Release ]; then\nEXPORT_PATH=\"../../../release/applex64\"\nmkdir -p $EXPORT_PATH\ncp ${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}  $EXPORT_PATH/${FULL_PRODUCT_NAME}\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0C7BEDC232F23F100A1D898 /* Sources */ = {
