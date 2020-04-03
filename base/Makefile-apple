@@ -1,5 +1,5 @@
 include config.mak 
-files=base_switches.cc logging.cc string16.cc time.cc vlog.cc \
+files=base_switches.cc logging.cc string16.cc time_util.cc vlog.cc \
 	safe_strerror_posix.cc native_library_posix.cc file_util.cc file_util_posix.cc \
 	./debug/alias.cc ./debug/debugger.cc ./debug/debugger_posix.cc \
 	./files/file_path.cc \
@@ -12,7 +12,7 @@ files=base_switches.cc logging.cc string16.cc time.cc vlog.cc \
 cc=g++
 include=-I ../
 libs=$(lib)
-cflag2=$(cflag) -mmacosx-version-min=10.6 -dynamiclib -Wl,-single_module
+cflag2=$(cflag) -mmacosx-version-min=10.9 -dynamiclib -Wl,-single_module
 product_name=base
 
 $(product_name): $(files) Makefile
